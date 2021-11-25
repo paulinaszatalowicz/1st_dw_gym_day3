@@ -1,35 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
+### parę ćwiczeń z pętli
 
-# # DWgym - day3 🐍
-# 
-# 
-# Zaczynamy **3 dzień** treningu Python! 
-# 
-# Za nami listy i pętle, a dzisiaj zajmiemy się **funkcjami w Python** 💪 
-# 
-# Jesteś w DW Club, a więc czeka Cię sporo dodatkowych zadań - bonus. Zaczynamy! 
-# 
-# **Obejrzyj uważnie nagranie  poniżej** i **wykonaj dzisiaj serię ćwiczeń**, o której dowiesz się z nagrania  👇👇👇
+```Python
 
-# ### 🤝🗣️ Współpraca 💪 i komunikacja 💬
-# 
-# - 👉 [#dwclub_members](https://dataworkshopclub.slack.com/archives/C02C2KDAS91) - w tym miejscu możesz zadawać dowolne pytania dotyczące klubu i wszystkich wydarzeń, również tego :)
-# 
-# - 👉 [#dwgym_day3](https://dataworkshopclub.slack.com/archives/C02KP53RUBA) - to jest miejsce, gdzie można szukać pomocy i dzielić się doświadczeniem, także pomagać innym 🥰. 
-# 
-# Jeśli masz pytanie, to staraj się jak najdokładniej je sprecyzować, najlepiej wrzuć screen z twoim kodem i błędem, który się pojawił ✔️
-# 
-# - 👉 [#dwgym_day3_done](https://dataworkshopclub.slack.com/archives/C02JWF976R3) -  tutaj wrzuć screeny zadań z tego notebooka, zgodnie z instrukcją Vladimira z nagrania 😊 
-# 
-# - 👉 [#dwgym_day3_ideas](https://dataworkshopclub.slack.com/archives/C02KC3773B3)- tutaj możesz dzielić się swoimi pomysłami
-# 
-# 
-
-# ## Jak uruchomić (wykonać) komórkę?
-# * `Shift + Enter` - wykonuje komórkę i przechodzi do następnej 
-
-# In[1]:
+In[1]:
 
 
 get_ipython().run_cell_magic('html', '', '<iframe style="height:500px;width:100%" src="https://www.youtube.com/embed/mbB9aZiTNLA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>')
@@ -91,7 +64,7 @@ identity(10)
 # In[13]:
 
 
-def is_even(number): #funkcja sprawdzajaca czy liczba jest parzysta
+def is_even(number):  #funkcja sprawdzajaca czy liczba jest parzysta
     if number % 2 == 0:
         return True
     else:
@@ -239,109 +212,4 @@ some_logics=[
 for my_logic in some_logics:
     print([my_logic(x) for x in list_years])
 
-
-# In[ ]:
-
-
-
-
-
-# ## Bonus  👇👇👇
-
-# In[1]:
-
-
-def display_name(first_name, last_name):
-    print(first_name, last_name)
-    
-params = {"first_name": "Adam", "last_name": "Nowak"}
-display_name(**params)
-
-
-# In[2]:
-
-
-other_params = {"last_name": "Nowak"}
-display_name("Adam", **other_params)
-
-
-# In[3]:
-
-
-def process_args(*args):
-    print(args)
-    
-process_args(10, 2, 3)
-
-
-# In[4]:
-
-
-def process(**kwargs):
-    print(kwargs)
-    
-    
-process(a=1, b=2, c=3)
-
-
-# In[5]:
-
-
-def process_args_kwargs(*args, **kwargs):
-    print(args, kwargs)
-
-    
-process_args_kwargs(1, 2, 3, a=1, b=2, c=3)
-
-
-# In[6]:
-
-
-def get_weigths():
-    return 7.65, 12.98, 10.23  
-
-my_weights = get_weigths()
-my_weights
-
-
-# In[7]:
-
-
-w_one, w_two, w_three = get_weigths()
-w_one
-
-
-# In[8]:
-
-
-def authorize(func):
-    def check_auth(user):
-        print("checking...")
-        if "admin" == user: 
-            func(user)
-        else:
-            raise "invalid auth"
-    return check_auth
-        
-@authorize
-def my_activity(user):
-    print("some secret message")
-
-
-# In[9]:
-
-
-my_activity("user")
-
-
-# ### Podziel się ze światem swoimi nowymi umiejętnościami 👏
-# 
-# Za Tobą dzień nauki i nowe umiejętności.  Pochwal się tym na swoim profilu LinkedIn ✔️
-# 
-# Dlaczego warto to zrobić? 🤔 
-# 
-# Przede wszystkim jest czym się pochwalić, bo wykonujesz właśnie w swoim życiu fajny krok w kierunku lepszej pracy i możliwości zawodowych, uczysz się czegoś nowego, a więc Twoi potencjalni pracodawcy powinni o tym wiedzieć ;) Poza tym warto to zrobić dla siebie :) 
-# 
-# Dodaj **#dwgym #dataworkshop #newskills #practicalskills #Python**
-# 
-# Oznacz nas! Będzie nam miło. Nasz profil znajdziesz [tutaj](https://bit.ly/2Py5eGK) 🥰 
+```
